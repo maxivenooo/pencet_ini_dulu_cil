@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>💕 kado buat bocil 💕</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(-45deg,#ff9a9e,#fecfef,#a8edea,#fbc2eb);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+height:100vh;
+overflow:hidden;
+}
+
+@keyframes bg{
+0%,100%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+}
+
+.page{
+position:absolute;
+width:100%;
+height:100vh;
+display:none;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+}
+
+.active{
+display:flex;
+}
+
+.loading-cat{
+font-size:8rem;
+animation:kucing 2s infinite;
+}
+
+@keyframes kucing{
+0%,100%{transform:translateX(0);}
+50%{transform:translateX(20px);}
+}
+
+.loading-text{
+font-size:2.3rem;
+font-family:'Fredoka One',cursive;
+margin-top:20px;
+color:white;
+text-shadow:0 0 20px pink;
+}
+
+.title{
+font-size:3rem;
+font-family:'Fredoka One',cursive;
+color:white;
+margin-bottom:30px;
+text-shadow:0 0 20px rgba(255,255,255,.7);
+}
+
+.btn{
+padding:18px 45px;
+border:none;
+border-radius:50px;
+background:white;
+font-size:1.3rem;
+font-weight:bold;
+cursor:pointer;
+color:#ff4fa3;
+transition:.3s;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+.boong{
+font-size:4rem;
+font-family:'Fredoka One',cursive;
+background:linear-gradient(45deg,#ff6b6b,#feca57);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:goyang .3s infinite;
+}
+
+@keyframes goyang{
+0%,100%{transform:rotate(0deg);}
+25%{transform:rotate(-3deg);}
+75%{transform:rotate(3deg);}
+}
+
+.message{
+display:none;
+max-width:700px;
+color:white;
+animation:muncul 1s ease;
+}
+
+@keyframes muncul{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.message h1{
+font-size:2.7rem;
+margin-bottom:25px;
+font-family:'Fredoka One',cursive;
+}
+
+.message p{
+font-size:1.2rem;
+line-height:1.8;
+margin:15px 0;
+}
+
+.card{
+width:90%;
+max-width:390px;
+padding:25px;
+border-radius:30px;
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(15px);
+border:2px solid rgba(255,255,255,0.2);
+box-shadow:0 10px 40px rgba(0,0,0,0.25);
+text-align:center;
+animation:card 1s ease;
+position:relative;
+z-index:2;
+}
+
+@keyframes card{
+from{
+opacity:0;
+transform:scale(.7);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+.foto{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:25px;
+border:5px solid white;
+margin-bottom:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.card h1{
+font-size:2.2rem;
+color:white;
+margin-bottom:15px;
+}
+
+.card p{
+color:white;
+font-size:1.1rem;
+line-height:1.7;
+margin:10px 0;
+}
+
+.heart{
+position:absolute;
+font-size:20px;
+animation:jatuh linear forwards;
+pointer-events:none;
+}
+
+@keyframes jatuh{
+0%{
+transform:translateY(-10vh) rotate(0deg);
+opacity:1;
+}
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:0;
+}
+}
+
+.float{
+position:fixed;
+pointer-events:none;
+animation:naik linear infinite;
+}
+
+@keyframes naik{
+0%{
+transform:translateY(100vh) rotate(0deg);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-100px) rotate(720deg);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- loading -->
+<div class="page active" id="page1">
+
+<div class="loading-cat">🐱</div>
+
+<div class="loading-text">
+sabar ya bocill  😝🗿
+</div>
+
+</div>
+
+<!-- teaser -->
+<div class="page" id="page2">
+
+<div class="title">
+mau kado gaa 😋 🗿
+</div>
+
+<button class="btn" onclick="masukPage3()">
+ 🗿 pencet sini  🗿
+</button>
+
+</div>
+
+<!-- boong -->
+<div class="page" id="page3">
+
+<div class="boong" id="boong">
+tapi boong wlee 😝🗿
+</div>
+
+<div class="message" id="message">
+
+<h1>happy birthday bocill 🎂</h1>
+
+<p>
+11-06-2011, hari lahir manusia kecil yang dulu pernah jadi bagian cerita aku 😭
+</p>
+
+<p>
+semoga makin cantik, sehat, lucu, bahagia terus dan semua harapan kamu tercapai 💖
+</p>
+
+<p>
+makasih ya dulu pernah hadir dan bikin hari hari jadi seruu 🌸
+</p>
+
+<p>
+jangan lupa makan, jangan sering begadang, dan tetep jadi bocil random 😭
+</p>
+
+<button class="btn" onclick="showGift()">
+kali ini serius hadiah  🗿
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+setTimeout(()=>{
+document.getElementById("page1").classList.remove("active");
+document.getElementById("page2").classList.add("active");
+},4000);
+
+function masukPage3(){
+
+document.getElementById("page2").classList.remove("active");
+document.getElementById("page3").classList.add("active");
+
+setTimeout(()=>{
+
+document.getElementById("boong").style.display="none";
+
+document.getElementById("message").style.display="block";
+
+},4000);
+
+}
+
+function showGift(){
+
+document.getElementById("page3").innerHTML=`
+
+<div class="card">
+
+<img src="fotoo.jpg" class="foto">
+
+<h1>happy birthday bocill 💕</h1>
+
+<p>
+cieee sekarang udh nambah umur 🎂
+</p>
+
+<p>
+semoga makin cantik, lucu, sehat dan bahagia terus 💖
+</p>
+
+<p>
+maaf hadiahnya cuma beginian 😭
+soalnya hadiah terbaik ya aku 😝
+</p>
+
+<button class="btn" onclick="alert('I once loved you bocill 🗿')">
+pencet akuu
+</button>
+
+</div>
+
+`;
+
+buatHati();
+
+}
+
+function buatHati(){
+
+setInterval(()=>{
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+const emoji=["💖","💕","💗","💘","💞"];
+
+heart.innerHTML=emoji[Math.floor(Math.random()*emoji.length)];
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(Math.random()*25+15)+"px";
+
+heart.style.animationDuration=(Math.random()*3+3)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+},250);
+
+}
+
+function floater(){
+
+const item=["🐱","💕","✨","🌸","🎂","🎁"];
+
+setInterval(()=>{
+
+const div=document.createElement("div");
+
+div.className="float";
+
+div.innerHTML=item[Math.floor(Math.random()*item.length)];
+
+div.style.left=Math.random()*100+"vw";
+
+div.style.fontSize=(Math.random()*20+20)+"px";
+
+div.style.animationDuration=(Math.random()*4+6)+"s";
+
+document.body.appendChild(div);
+
+setTimeout(()=>{
+div.remove();
+},10000);
+
+},1000);
+
+}
+
+floater();
+
+</script>
+
+</body>
+  </html>
